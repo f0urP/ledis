@@ -1,0 +1,42 @@
+html {
+  background-color: #000;
+}
+
+#ledis-cli {
+  overflow: scroll;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: #d8f8f9;
+}
+
+.cmd {
+  padding: 7px;
+  display: flex;
+  flex-flow: row;
+}
+
+#stream {
+  margin-top: 10px;
+  padding: 7px;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  outline-width: 0;
+  background-color: #d8f8f9;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  width: 50%;
+  background-color: aquamarine;
+  text-align: center;
+}

@@ -1,0 +1,166 @@
+@host=http://localhost:3000
+
+# @name set
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "set",
+  "args" : ["stringKey", "string value"]
+}
+
+####
+# @name get
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "get",
+  "args": ["stringKey"]
+}
+
+####
+# @name llen
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "llen",
+  "args": ["listKey"]
+}
+
+####
+# @name rpushString
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "rpush",
+  "args": ["listKey", "value of list"]
+}
+
+
+####
+# @name rpushArray
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "rpush",
+  "args": ["listKey", "item2", "item3"]
+}
+
+
+####
+# @name lpopArray
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "lpop",
+  "args": ["listKey"]
+}
+
+####
+# @name rpopArray
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "rpop",
+  "args": ["listKey"]
+}
+
+####
+# @name lrange
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "lrange",
+  "args": ["listKey", 0, 10]
+}
+
+####
+# @name sadd
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "sadd",
+  "args": ["setKey", "value"]
+}
+
+####
+# @name saddMultiple
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "sadd",
+  "args": ["setKey", "0", "3", "4", "5"]
+}
+
+
+####
+# @name saddMultiple
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "sadd",
+  "args": ["setKey1",  "3", "5", "8", "10"]
+}
+
+####
+# @name saddMultiple
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "sadd",
+  "args": ["setKey2", "3", "0", "10"]
+}
+
+####
+# @name scard
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "scard",
+  "args": ["setKey"]
+}
+
+####
+# @name smembers
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "smembers",
+  "args": ["setKey"]
+}
+
+####
+# @name srem
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "srem",
+  "args": ["setKey", "3"]
+}
+
+####
+# @name sinter
+POST {{host}}
+Content-Type: application/json
+
+{
+  "operator": "sinter",
+  "args": ["setKey", "setKey1", "setKey2"]
+}
+
+###
+GET {{host}}
