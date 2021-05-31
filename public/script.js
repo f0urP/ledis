@@ -34,7 +34,7 @@ cmdInput.addEventListener("keyup", event => {
 const showResponse = responseText => {
   try {
     const response = JSON.parse(responseText);
-    if (response && response.result) {
+    if (response && response.result !== null) {
       if (Array.isArray(response.result)) {
         if (response.result.length > 0) {
           response.result.map(element => appendStream(element));
